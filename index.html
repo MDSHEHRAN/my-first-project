@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>smart hostel complaint management platform</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+<!-- LOGIN -->
+
+<div class="login" id="loginPage">
+
+<h2>Hostel Complaint System</h2>
+
+<label>User Type</label>
+<select>
+<option>Student</option>
+<option>Admin</option>
+</select>
+
+<input type="email" placeholder="Enter Email">
+
+<input type="password" placeholder="Enter Password">
+
+<button onclick="login()">Login</button>
+
+</div>
+
+
+<!-- MAIN WEBSITE -->
+
+<div id="mainSite" style="display:none">
+
+<header>
+
+<h1>Smart Hostel Complaint Platform</h1>
+
+<nav>
+
+<button onclick="showPage('home')">Home</button>
+<button onclick="showPage('complaint')">Complaint</button>
+<button onclick="showPage('status')">Status</button>
+<button onclick="showPage('contact')">Contact</button>
+
+</nav>
+
+</header>
+
+
+<!-- HOME PAGE -->
+
+<div class="page" id="home">
+
+<h2>Complaint Categories</h2>
+
+<div class="cards">
+
+<div class="card" onclick="openComplaint('Mess')">
+<h3>Mess Complaint</h3>
+<p>Food quality issue</p>
+</div>
+
+<div class="card" onclick="openComplaint('Room')">
+<h3>Room Issue</h3>
+<p>Fan, Bed, Desk problem</p>
+</div>
+
+<div class="card" onclick="openComplaint('Washroom')">
+<h3>Washroom</h3>
+<p>Cleaning or water issue</p>
+</div>
+
+<div class="card" onclick="openComplaint('Student Behavior')">
+<h3>Student Behavior</h3>
+<p>Noise or misconduct</p>
+</div>
+
+<div class="card" onclick="openComplaint('Hostel Fees')">
+<h3>Hostel Fees</h3>
+<p>Payment issue</p>
+</div>
+
+<div class="card" onclick="openComplaint('Room Allotment')">
+<h3>Room Allotment</h3>
+<p>Allotment related problem</p>
+</div>
+ 
+<div class="card" onclick="openComplaint('lift')">
+<h3>lift Issue</h3>
+</div>
+</div>
+
+</div>
+
+
+<!-- COMPLAINT FORM -->
+
+<div class="page" id="complaint">
+
+<h2>Submit Complaint</h2>
+
+<form>
+
+<label>Category</label>
+<input type="text" id="category" readonly>
+
+<label>Room Number</label>
+<input type="text" id="room">
+
+<label>floor</label>
+<input type="text" id="floor">
+
+<label>hostel name</label>
+<input type="text" id="hostel name">
+                                        
+<label>Description</label>
+<textarea rows="4" id="desc"></textarea>
+
+<button type="button" onclick="submitComplaint()">Submit Complaint</button>
+
+</form>
+
+</div>
+
+
+<!-- STATUS PAGE -->
+
+<div class="page" id="status">
+
+<h2>Complaint Status</h2>
+
+<table id="statusTable">
+
+<tr>
+<th>ID</th>
+<th>Category</th>
+<th>Room</th>
+<th>Status</th>
+</tr>
+
+</table>
+
+</div>
+
+
+<!-- CONTACT -->
+
+<div class="page" id="contact">
+
+<h2>Contact Hostel Administration</h2>
+
+<p style="text-align:center">
+Email: hosteladmin@gmail.com <br><br>
+Phone: +91 9876543210 <br><br>
+Office Time: 10 AM – 5 PM
+</p>
+
+</div>
+
+
+
+
+
+<script src="script.js"></script>
+
+
+
+
+</body>
+</html>
